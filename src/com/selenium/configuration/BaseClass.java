@@ -30,24 +30,27 @@ public class BaseClass {
 	public static void startTest()
 	{
 		report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
-		
+
 	}
 
 	@BeforeMethod
-	@Parameters({"browser","datafile","sheet" })
-	public void beforeTest(String browser,String datafile,String sheetname) throws Exception {
-	//	test = report.startTest((this.getClass().getSimpleName() + "::"+method.getName()));
-		driver = BrowserSetUp.launchBrowser(browser);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	@Parameters({"environment","browser","datafile","sheet" })
+	public void beforeTest(String environment,String browser,String datafile,String sheetname) throws Exception {
+		//	test = report.startTest((this.getClass().getSimpleName() + "::"+method.getName()));
+		if(environment.toLowerCase().equals("local"))
+			driver = BrowserSetUp.launchLocalBrowser(browser);
+		else if(environment.toLowerCase().equals("remote"))
+			driver = BrowserSetUp.launchRemoteBrowser(browser);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		testdata = new ReadExcelSheetData(datafile,sheetname);
 		driver.get(testdata.getValue("url"));
 
 	}
-	
+
 	public WebDriver getDriver() {
-        return driver;
-    }
+		return driver;
+	}
 
 	@AfterMethod
 	public void afterTest() {

@@ -8,6 +8,8 @@
 		<parameter name="browser" value="chrome" />
 		<parameter name="datafile" value="TestDataSheet" />
 		<parameter name="sheet" value="QA" />
+		<parameter name="environment" value="local" />
+		
 		<!-- <groups> <run> <include name="sanity" /> </run> </groups> -->
 
 

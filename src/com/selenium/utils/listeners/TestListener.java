@@ -22,7 +22,7 @@ public class TestListener extends BaseClass implements ITestListener {
     //Before starting all tests, below method runs.
     @Override
     public void onStart(ITestContext iTestContext) {
-        System.out.println("Test Execution Started - " + iTestContext.getName());
+       // System.out.println("Test Execution Started - " + iTestContext.getName());
         iTestContext.setAttribute("WebDriver", this.driver);
     }
  

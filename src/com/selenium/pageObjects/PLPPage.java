@@ -19,6 +19,18 @@ public class PLPPage {
 	By pickupLabel=By.xpath("//input[@id='pickup_checkbox']/following-sibling::label");
 	By shipingLabel=By.xpath("//input[@id='shipping_checkbox']/following-sibling::label");
 	By deliveryLabel=By.xpath("//input[@id='delivery_checkbox']/following-sibling::label");
+	
+	By produtname=By.xpath("//section//li[4]//h2[@class='plp-product-title']/a");
+    By Productimg=By.xpath("//li[1]//div[@class=\"plp-list-product-img\"]");
+    By productprice=By.xpath("//li[1]//span[@class=\"price\"]");
+    By add_to_cart=By.xpath("//li[1]//div[@class=\"add_to_cart_form clear_fix\"]");
+    By savetolist=By.xpath("//div[@class=\"plp-list-buy-ctrls\"]//div[2]");
+    By sortby=By.xpath("//select[@id=\"sortOptions\"]");
+    By pagesize=By.xpath("//select[@name=\"dropdown\"]");
+    By pickupinstore=By.xpath("//a[@class=\" an_isp\"]");
+    By shipto=By.xpath("//a[@class=\" an_shipTo\"]");
+    By reviewlink=By.xpath("//li[1]//div[@class=\"plp-product-ratreview\"][1]");
+
 
 
 	public PLPPage(WebDriver driver) {

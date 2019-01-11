@@ -1,7 +1,6 @@
 <suite name="TestNG Examples" verbose="1">
  <listeners>
         <listener class-name="com.selenium.utils.listeners.TestListener"/>
-        <listener class-name="com.selenium.utils.listeners.AnnotationTransformer"/>
     </listeners>
 	<test name="test1">
 

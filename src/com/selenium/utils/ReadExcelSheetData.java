@@ -25,8 +25,8 @@ public class ReadExcelSheetData {
 	}
 
 
-	public static Map<String,  Map<String, String>> setMapData() throws IOException {
-
+	//public static Map<String,  Map<String, String>> setMapData() throws IOException {
+	 public static Map<String,  String> setMapData() throws IOException {
 		String path = "testdata\\"+filename+".xlsx";
 
 		FileInputStream fis = new FileInputStream(path);
@@ -60,18 +60,19 @@ public class ReadExcelSheetData {
 			dataMap.put(key, value);
 
 			//Putting dataMap to excelFileMap
-			testdataMap.put("DataSheet", dataMap);
+			//testdataMap.put("DataSheet", dataMap);
 		}
 
 		//Returning excelFileMap
-		return testdataMap;
+		//return testdataMap;
+		return dataMap;
 
 	}
 
 	//Method to retrieve value
 	public String getValue(String key) throws IOException{
 
-		Map<String, String> m = setMapData().get("DataSheet");
+		Map<String, String> m = setMapData();//.get("DataSheet");
 		String value = m.get(key);
 
 		return value;

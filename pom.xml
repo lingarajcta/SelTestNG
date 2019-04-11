@@ -68,7 +68,7 @@
 				<version>2.14.1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>testng0.xml</suiteXmlFile>
+						<suiteXmlFile>testngQA.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

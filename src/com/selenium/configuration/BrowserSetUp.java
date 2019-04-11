@@ -42,7 +42,7 @@ public class BrowserSetUp {
 			driver = new ChromeDriver();
 		}else if(browser.toLowerCase().equals("emulator")) {
 			System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
-			Map<String, String> mobileEmulation = new HashMap<>();
+			Map<String, String> mobileEmulation = new HashMap<String, String>();
 			mobileEmulation.put("deviceName", "Nexus 5");
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
